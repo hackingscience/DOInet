@@ -5,3 +5,4 @@
 <% @pubs.each do |p| %>
   <%= link_to p.doi, publication_path(p.doi) %> cites <%= link_to p.cites, publication_path(p.cites) %> <br />
 <% end %>
+<%= paginate @pubs %>
