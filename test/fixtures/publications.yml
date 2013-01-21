@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  doi: MyString
+  cites: MyString
+
+two:
+  doi: MyString
+  cites: MyString
