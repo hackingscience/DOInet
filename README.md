@@ -1,7 +1,7 @@
 DOInet
 ======
 
-Network of DOIs Rails app.
+DOInet is a user generated graph of DOIs (Digital object identifiers)
 
 ## Install
 
@@ -25,6 +25,10 @@ Create database
 Migrate database
 
     rake db:migrate
+
+(OPTIONAL) Load seed data
+
+    rake db:seed
 
 Run the app server (the bundled app server is Unicorn)
 

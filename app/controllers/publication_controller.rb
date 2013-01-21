@@ -6,7 +6,7 @@ class PublicationController < ApplicationController
   end
 
   def show
-    render :text => "my id is #{params[:id]}"
+
   end
 
   def new
