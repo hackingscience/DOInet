@@ -3,8 +3,11 @@ class PublicationController < ApplicationController
 
   def index 
     @publication = Publication.new
-    @pubs = Publication.where("doi LIKE ? OR cites LIKE ?", "%#{params[:doi]}%", "%#{params[:doi]}%")
-
+  end
+  
+  def search
+    @publication = Publication.new
+    @pubs = Publication.where("doi LIKE ? OR cites LIKE ?", "%#{params[:doi]}%", "%#{params[:doi]}%").order("doi").page(params[:page])
   end
 
   def show
