@@ -26,6 +26,10 @@ Migrate database
 
     rake db:migrate
 
+(OPTIONAL) Load seed data
+
+    rake db:seed
+
 Run the app server (the bundled app server is Unicorn)
 
     rails server
