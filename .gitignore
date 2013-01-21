@@ -28,3 +28,6 @@ pickle-email-*.html
 .DS_Store
 nohup.out
 
+# not all devs use rvmrc
+.rvmrc
+
