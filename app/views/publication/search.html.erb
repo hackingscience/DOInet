@@ -1,8 +1,8 @@
-<%= render :partial => 'search_form' %>
+<%= render :partial => 'search_form', :locals => {:q => params[:doi]} %>
 <%= @pubs.count %> DOI found <br />
 
 <%= paginate @pubs %>
 <% @pubs.each do |p| %>
-  <%= link_to p.doi, publication_path(p.doi) %> cites <%= link_to p.cites, publication_path(p.cites) %> <br />
+  <%= link_to p.doi, publication_path(p.id) %><br /> 
 <% end %>
 <%= paginate @pubs %>
