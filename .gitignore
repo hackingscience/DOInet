@@ -14,3 +14,17 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+
+# emacs cruft
+*~
+\#*
+.\#*
+
+# vi cruft
+*.swp
+*.swo
+
+# osx cruft
+.DS_Store
+nohup.out
+
