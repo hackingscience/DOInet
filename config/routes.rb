@@ -12,7 +12,9 @@ DOInet::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  resources :publication
+  resources :publication do
+    resources :citation
+  end
   match 'search' => 'publication#search', :as => :search
   
 

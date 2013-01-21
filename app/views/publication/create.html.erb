@@ -1,0 +1,10 @@
+<div class="alert alert-success">You have created the DOI <%= @p.doi %> <%= @p.title %></div>
+
+Add citations for <%= @p.doi %>
+<hr />
+<form path="" method="post">
+  <%= label_tag :cited_id %>
+  <%= text_field_tag :cited_id %>
+  <br />
+  <%= submit_tag 'Add Citation' %>
+</form>

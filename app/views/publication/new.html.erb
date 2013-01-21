@@ -1,0 +1,10 @@
+<%= form_for @publication, :url => publication_index_path  do |p| %>
+  <%= p.label :doi %>
+  <%= p.text_field :doi %>
+
+  <%= p.label :title %>
+  <%= p.text_field :title %>
+
+  <br />
+  <%= p.submit 'Add DOI' %>
+<% end %>

@@ -15,11 +15,15 @@ class PublicationController < ApplicationController
   end
 
   def new
-    render :text => "New form for DOI"
+    @publication = Publication.new 
   end
 
   def create
-    render :text => "Creating a New DOI"
+    @p = Publication.new
+    @p.doi = params[:publication][:doi]
+    @p.title = params[:publication][:title]
+    @p.save
+    @citation = Citation.new 
   end
 
   def edit
