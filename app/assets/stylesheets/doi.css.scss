@@ -1,3 +1,23 @@
 // Place all the styles related to the doi controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap";
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  color:#333;
+}
+
+
+/* Custom container */
+.container-narrow {
+  margin: 0 auto;
+  padding: 0px 20px 0px 20px;
+  max-width: 700px;
+}

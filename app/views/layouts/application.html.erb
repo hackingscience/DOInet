@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DOInet</title>
+  <title>PlantVillage</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
+
+
+
 <body>
 
-<%= yield %>
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container-narrow">
+      <%=link_to "DOInet 0.1", "#", class:"brand"%>
+    </div>
+  </div>
+</div>
+
+<div class="container-narrow">
+
+
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+  <%= yield %>
+
+  <%= render 'layouts/footer' %>
+</div> <!-- /container -->
+
+
 
 </body>
 </html>
+
+
+
