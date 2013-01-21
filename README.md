@@ -9,7 +9,6 @@ Infrastructural components
 
  * Ruby 1.9.3 (we use RVM to manage our Rubies)
  * A relational database (SQLite and MySQL have been tested)
- * Redis (for activity streams and background jobs)
 
 Get the DOInet code
 
