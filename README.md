@@ -1,7 +1,13 @@
 DOInet
 ======
 
-DOInet is a user generated graph of DOIs (Digital object identifiers)
+DOInet is a user generated graph of DOIs (Digital object identifiers).
+
+Digital object identifiers are ids that uniquely identify scientific articles. DOINet's goal is to provide a graph of DOIs, so that
+for every article represented by a DOI, it shows the DOIs of the articles that are being cited, and that cite that article. Currently, this
+information is not openly available in a single public repository.
+
+The citation relationships of DOIs (the DOI graph) can serve as a basis for various tools that can be built off of DOInet.
 
 ## Install
 
