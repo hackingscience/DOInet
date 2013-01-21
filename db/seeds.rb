@@ -17,7 +17,10 @@ def random_doi
 end
 
 DOIs.each do |doi|
+  pub = Publication.create(doi: doi)
   20.times do
-    Publication.create(doi: doi, cites: random_doi)
+    cited = Publication.create(doi: random_doi)
+    pub.citations.build(cited_id: cited.id)
+    pub.save
   end
 end
