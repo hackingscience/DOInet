@@ -4,7 +4,7 @@ class Publication < ActiveRecord::Base
 
   validates :doi, :format => { :with => %r{\b(10[.][0-9]{4,}(?:[.][0-9]+)*/(?:(?!["&\'<>])[[:graph:]])+)\b}, :message => "DOI must have valid format" } #"
 
-  def cited
+  def cites
     Citation.find_all_by_citer_id(self.id).map do |c|
       Publication.find(c.cited_id)
     end
