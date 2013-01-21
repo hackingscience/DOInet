@@ -1,8 +1,13 @@
 class Publication < ActiveRecord::Base
   attr_accessible :doi, :title
   has_many :citations, foreign_key: "citer_id", dependent: :destroy
+  before_save :normalize_doi
+  validates :doi, :format => { :with => Rails.application.config.doi_regex, :message => "DOI must have valid format" }
 
-  validates :doi, :format => { :with => %r{\b(10[.][0-9]{4,}(?:[.][0-9]+)*/(?:(?!["&\'<>])[[:graph:]])+)\b}, :message => "DOI must have valid format" } #"
+  def normalize_doi
+    return unless new_record?
+    self.doi = "http://dx.doi.org/#{Rails.application.config.doi_regex.match(self.doi)[0]}"
+  end
 
   def cites
     Citation.find_all_by_citer_id(self.id).map do |c|
