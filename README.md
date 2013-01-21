@@ -1,7 +1,7 @@
 DOInet
 ======
 
-Network of DOIs Rails app.  Make this description better, Marcel.
+Network of DOIs Rails app.
 
 ## Install
 
