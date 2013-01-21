@@ -1,7 +1,7 @@
 DOInet
 ======
 
-Network of DOIs Rails app.  Make this description better, Marcel.﻿# ScholarSphere
+Network of DOIs Rails app.  Make this description better, Marcel.
 
 ## Install
 
@@ -11,7 +11,7 @@ Infrastructural components
  * A relational database (SQLite and MySQL have been tested)
  * Redis (for activity streams and background jobs)
 
-Get the ScholarSphere code
+Get the DOInet code
 
     git clone https://github.com/hackingscience/DOInet.git
 
