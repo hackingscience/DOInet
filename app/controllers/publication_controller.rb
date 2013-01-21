@@ -2,7 +2,7 @@ class PublicationController < ApplicationController
 
 
   def index 
-
+    @publication = Publication.new
   end
 
   def show

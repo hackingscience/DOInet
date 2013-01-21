@@ -1,13 +1,4 @@
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span2">
-      <!--Sidebar content-->
-    </div>
-    <div class="span10">
-    <h1>Search DOI</h1>
-    
-      <button class="btn" type="button">Search</button>
-      <!--Body content-->
-    </div>
-  </div>
-</div>
+<h1>Search DOI</h1>
+<%= form_tag publication_index_path, :method => :get, :id => "search-form" do %>
+  <%= text_field_tag :doi, '', :placeholder => "Search for DOI" %> <button class="btn" type="button">Go</button>
+<% end %>
