@@ -7,8 +7,8 @@ Network of DOIs Rails app.  Make this description better, Marcel.
 
 Infrastructural components
 
- * Ruby 1.9.3 (we use RVM to manage our Rubies)
- * A relational database (SQLite and MySQL have been tested)
+ * Ruby 1.9.3 (some of us use RVM to manage our Rubies)
+ * A relational database (SQLite is default)
 
 Get the DOInet code
 
@@ -18,14 +18,6 @@ Install gems
 
     bundle install
 
-Copy config samples
-
-    cp config/database.yml.sample config/database.yml
-
-If you're using SQLite, you should not need to tweak the database.yml file.
-
-If you're using MySQL, create the database in MySQL.
-
 Create database
 
     rake db:create
@@ -33,7 +25,6 @@ Create database
 Migrate database
 
     rake db:migrate
-    rake db:test:prepare
 
 Run the app server (the bundled app server is Unicorn)
 
