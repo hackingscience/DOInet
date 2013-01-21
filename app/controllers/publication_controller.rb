@@ -1,6 +1,10 @@
 class PublicationController < ApplicationController
 
 
+  def index 
+
+  end
+
   def show
     render :text => "my id is #{params[:id]}"
   end
