@@ -31,3 +31,6 @@ nohup.out
 # not all devs use rvmrc
 .rvmrc
 
+# stuff from RubyMine
+.idea
+

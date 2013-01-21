@@ -1,7 +1,7 @@
 DOInet
 ======
 
-Network of DOIs Rails app.
+DOInet is a user generated graph of DOIs (Digital object identifiers)
 
 ## Install
 
